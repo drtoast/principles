@@ -159,6 +159,8 @@ Integration tests are slow, and integration tests are harder to debug since the 
 
 “if you find yourself continuously fixing existing tests as you add new features, it means that your tests are tightly coupled to internal implementation.” - Kostis Kapelonis [Kostis Kapelonis][4]
 
+"I have seen a nice definition of "architecture" somewhere. It said that architecture is that what makes software able to change. If we embrace this point of view, unit tests can be considered to be a strictly an anti-architecture device." - [Martin Sústrik][18]
+
 <a name="tests-good-design"></a>
 ### Tests are not a substitute for good design
 

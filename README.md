@@ -7,6 +7,7 @@
   * [Use Functional Programming Where Possible](#functional-programming)
   * [Prefer Duplication Over the Wrong Abstraction](#duplication)
   * [You Aren't Going to Need It (Yagni)](#yagni)
+  * [Use Short Methods](#short-methods)
   * [Pursue Ephemeralization](#ephemeralization)
   * [Recognize the Law of Leaky Abstractions](#leaky-abstractions)
 * [Write Tests](#write-tests)
@@ -85,6 +86,15 @@ Building a presumptive feature can incur these types of costs (paraphrasing [Mar
 * **Cost of repair**: you often realize that a feature coded six months ago wasn't done the way you now realize it should be done. In that case you have accumulated TechnicalDebt and have to consider the cost of repair for that feature or the on-going costs of working around its difficulties.
 
 "Yagni only applies to capabilities built into the software to support a presumptive feature, it does not apply to effort to make the software easier to modify. Yagni is only a viable strategy if the code is easy to change, so expending effort on refactoring isn't a violation of yagni because refactoring makes the code more malleable." - [Martin Fowler][15]
+
+<a name="short-methods"></a>
+### Use Short Methods
+
+"The more code you have to read before you can form units of meaning larger than line-level constructs in your programming LanguageOfChoice, the harder your task. Therefore, be lazy. Make it easy on yourself. Never write a method that would require hard thinking to analyze. Factor out units of semantic meaning, even if they are only ever used once. Define them reasonably close by each other until and unless you identify a clear opportunity for meaningful reuse. Use short methods. Lots of short methods." - [Ward Cunningham][19]
+
+"Breaking up methods makes them self documenting code, without comments. Each time that you pull out a piece of the method, you have to create a name for it. Well-chosen names allow you to avoid comments." - [Ward Cunningham][19]
+
+"Small chunks are more easily understood than larger chunks. It is easier to reuse things that you understand well. The smaller your Legos, the more flexibly you can build." - [Ward Cunningham][19]
 
 <a name="ephemeralization"></a>
 ### Pursue Ephemeralization
@@ -192,6 +202,7 @@ Integration tests are slow, and integration tests are harder to debug since the 
 1. [Brandur Leach - In Pursuit of Production Minimalism (2017)][16]
 1. [Joel Spolsky - The Law of Leaky Abstractions (2002)][17]
 1. [Martin Sústrik - Unit Test Fetish (2014)][18]
+1. [Ward Cunningham - Short Methods (2008)][19]
 
 [1]: http://www.cs.tufts.edu/comp/98/out-of-the-tar-pit.pdf
 [2]: https://8thlight.com/blog/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html
@@ -211,3 +222,4 @@ Integration tests are slow, and integration tests are harder to debug since the 
 [16]: https://brandur.org/minimalism
 [17]: https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/
 [18]: http://250bpm.com/blog:40
+[19]: http://wiki.c2.com/?ShortMethods
